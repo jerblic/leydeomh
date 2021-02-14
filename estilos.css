@@ -1,0 +1,208 @@
+.cuerpo {
+  position: relative;
+  left: 100px;
+  top: 40px;
+  text-align: center;
+  background: radial-gradient(
+    circle,
+    rgb(162, 171, 192) 10%,
+    rgb(228, 218, 218)
+  );
+  width: 1000px;
+  border: 0px;
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0pt;
+  word-spacing: 0pt;
+}
+.seccion1 {
+  width: 350px;
+  text-align: center;
+  background: rgb(184, 183, 181);
+  height: 500px;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  position: absolute;
+  left: 10px;
+}
+.seccion2 {
+  text-align: center;
+  width: 350px;
+  height: 500px;
+  background: rgb(184, 183, 181);
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  position: absolute;
+  left: 365px;
+}
+/* hacer que los deslizadores sean verticales */
+/*posición de los deslizadores*/
+#fu_voltaje {
+  position: absolute;
+  left: -40px;
+  top: 250px;
+  transform: rotate(-90deg);
+  z-index: 3;
+  cursor: pointer;
+}
+#Va_resistencia {
+  position: absolute;
+  right: -35px;
+  top: 250px;
+  transform: rotate(-90deg);
+  z-index: 3;
+  cursor: pointer;
+}
+/*posicionamiento de la immagen*/
+.imagen {
+  position: absolute;
+  left: 30px;
+  top: 150px;
+  z-index: 2;
+}
+/*posicionamiento de los label de los deslizadores*/
+.vol {
+  position: absolute;
+  left: 100px;
+  top: 260px;
+}
+
+.res {
+  position: absolute;
+  left: 220px;
+  top: 260px;
+}
+
+.corriente {
+  position: absolute;
+  left: 185px;
+  top: 190px;
+}
+.seccion3 {
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  background: rgb(184, 183, 181);
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  position: absolute;
+  left: 720px;
+}
+.leyenda1 {
+  position: absolute;
+  left: 10px;
+  top: 380px;
+  text-align: left;
+}
+#graficar {
+  position: absolute;
+  left: 270px;
+  top: 390px;
+  text-align: left;
+}
+table {
+  /* permite que la tabla se pueda configurar según sus encabezados*/
+  table-layout: fixed;
+  /* abarca el 100% del contenedor*/
+  width: 100%;
+  /* se establecen los bordes para que queden juntos sin espacios*/
+  border-collapse: collapse;
+  /* se establece el borde de la tabla*/
+  border: 3px solid purple;
+}
+/* se establece el porcentaje de cada columna de la tabla*/
+thead th:nth-child(1) {
+  width: 10%;
+}
+thead th:nth-child(2) {
+  width: 30%;
+}
+thead th:nth-child(3) {
+  width: 30%;
+}
+thead th:nth-child(4) {
+  width: 30%;
+}
+th,
+td {
+  padding: 5px;
+}
+/* configuración del encabezado de la tabla*/
+thead th {
+  /* color de fondo*/
+  background-color: red;
+  /* color de la letra*/
+  color: rgb(0, 0, 0);
+  /* se crea una sombra*/
+  text-shadow: 5px 5px 5px yellow;
+  /*ancho y color de la línea*/
+  border: 1px solid yellow;
+}
+/*configuración del cuerpo de la tabla*/
+tbody th,
+tbody td {
+  background: linear-gradient(
+    to bottom,
+    rgb(224, 230, 228),
+    rgba(0, 0, 0, 0.5)
+  );
+  border: 1px solid purple;
+}
+.tabla_scroll {
+  overflow: auto;
+  height: 400px;
+}
+canvas {
+  width: 377px;
+  height: 300px;
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  /* border: 1px solid black; */
+}
+/* estilos para los botones */
+.boton {
+  border-top: 1px solid #96d1f8;
+  background: #78868f;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#c0edad),
+    to(#78868f)
+  );
+  background: -webkit-linear-gradient(top, #c0edad, #78868f);
+  background: -moz-linear-gradient(top, #c0edad, #78868f);
+  background: -ms-linear-gradient(top, #c0edad, #78868f);
+  background: -o-linear-gradient(top, #c0edad, #78868f);
+  padding: 4px 8px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  border-radius: 11px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: #211921;
+  font-size: 14px;
+  font-family: verdana, sans-serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.boton:hover {
+  border-top-color: #287831;
+  background: #287831;
+  color: #ccc;
+}
+.boton:active {
+  border-top-color: #2c5c7d;
+  background: #2c5c7d;
+}
+.pie {
+  position: absolute;
+  left: 285px;
+  top: 560px;
+}

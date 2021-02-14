@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&Omega;</title>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+  </head>
+
+  <body class="cuerpo">
+    <h1>&nbsp &nbsp &nbsp &nbsp ley de omh &Omega;</h1>
+    <section class="seccion1">
+      <h1>Tabla de datos</h1>
+      <!--creamos una tabla-->
+      <div class="tabla_scroll">
+        <table id="datos">
+          <!--creamos el encabezado de la tabla-->
+
+          <!--se crean las columnas y sus nombres-->
+          <thead>
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col">Resistencia (ohm)</th>
+              <th scope="col">Voltaje (v)</th>
+              <th scope="col">Corriente (A)</th>
+            </tr>
+          </thead>
+          <!--se crean las filas con los datos de la tabla, las cuales se haran visible por javascrip-->
+          <tbody>
+            <tr></tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="boton" type="button" onclick="agregar_datos()">
+        Agregar
+      </button>
+      <button class="boton" type="button" onclick="borrar_datos()">
+        Borrar
+      </button>
+    </section>
+    <section class="seccion2">
+      <h1>Circuito Eléctrico</h1>
+      <label id="corriente" class="corriente">1 A </label>
+      <input
+        type="range"
+        value="0.1"
+        min="0.1"
+        max="1000"
+        step="0.1"
+        list="lista"
+        name="F_voltaje"
+        id="fu_voltaje"
+      />
+      <label id="vol" class="vol" for="vol">0.1 V</label>
+
+      <input
+        type="range"
+        value="0.1"
+        min="0.1"
+        max="1000"
+        step="0.1"
+        list="lista"
+        name="V_resistencia"
+        id="Va_resistencia"
+      />
+
+      <datalist id="lista">
+        <option value="1"></option>
+        <option value="250"></option>
+        <option value="500"></option>
+        <option value="750"></option>
+        <option value="1000"></option>
+      </datalist>
+
+      <label id="res" class="res" for="res">0.1 &Omega;</label>
+
+      <img src="circ.png" class="imagen" />
+    </section>
+    <section class="seccion3">
+      <h1>Gráfica</h1>
+      <canvas id="grafica" width="377" height="300"> </canvas>
+      <fieldset class="leyenda1">
+        <legend>tipo de gráfico</legend>
+        <input type="radio" id="grafico1" name="vol_res" value="uno" />
+        <label for="grafico1">Voltaje Vs Resistencia</label> <br />
+        <input type="radio" id="grafico2" name="vol_res" value="dos" />
+        <label for="grafico2">Resistencia Vs Corriente</label> <br />
+        <input type="radio" id="grafico3" name="vol_res" value="tres" checked />
+        <label for="grafico3">Voltaje Vs Corriente</label>
+      </fieldset>
+      <input
+        type="button"
+        class="boton"
+        value="Graficar"
+        id="graficar"
+        onclick="grafico()"
+      />
+    </section>
+    <footer class="pie">
+      <p>
+        Aplicación realizada por el ingeniero Jhon Edilberto Rodríguez Balanta
+        2021, visita
+        <a href="https://miprofeenlared.blogspot.com/" target="_blank"
+          >Mi profe en la red</a
+        >
+      </p>
+    </footer>
+    <script src="funciones.js"></script>
+    <script src="Chart.js"></script>
+  </body>
+</html>
